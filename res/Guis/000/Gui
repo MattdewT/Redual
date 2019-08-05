@@ -1,0 +1,5 @@
+000
+Label 40 -30 0.1 Play
+Button 0 a Play
+Background 5 -70 95 -5
+Animation 0 100 1000 x Label 0 ColorPickingBox 0 Background 0

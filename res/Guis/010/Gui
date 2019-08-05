@@ -1,0 +1,6 @@
+010
+Label 40 0 0.1 Back
+Button 0 a Menu
+ColorSelector -40 0
+Background -95 -70 95 70
+Animation 0 -200 1000 y Label 0 ColorSelector 0 Background 0 ColorPickingBox 0

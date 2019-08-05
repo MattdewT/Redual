@@ -1,0 +1,4 @@
+001
+Label 40 45 0.1 Credits
+Background 5 70 95 5
+Animation 0 100 1000 x Label 0 Background 0

@@ -1,0 +1,5 @@
+003
+Label -75 -30 0.1 Options
+Background -5 -70 -95 -5
+Button 0 a Options
+Animation 0 -100 1000 x Label 0 Background 0 ColorPickingBox 0

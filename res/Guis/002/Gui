@@ -1,0 +1,5 @@
+002
+Label -75 45 0.1 Tutorial
+Background -5 70 -95 5
+Button 0 a Match
+Animation 0 -100 1000 x Label 0 Background 0 ColorPickingBox 0
