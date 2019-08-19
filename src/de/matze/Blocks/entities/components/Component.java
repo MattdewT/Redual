@@ -9,7 +9,7 @@ public class  Component {
     private ComponentTypes ComponentType;
 
     public enum ComponentTypes {
-        Transform, ViewPoint, Camera, Player, aabb, Mesh, Magazin, ShipMovement, ShipTurning
+        Transform, ViewPoint, Camera, Player, aabb, Mesh, Magazin, ShipMovement, ShipTurning, Velocity
     }
 
     public Component(ComponentTypes ComponentId) {

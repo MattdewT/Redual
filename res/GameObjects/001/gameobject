@@ -1,4 +1,5 @@
 001
 Transform
 Body body.obj body.png
-ShipMovement 10
+Velocity 10
+ShipMovement 50 50

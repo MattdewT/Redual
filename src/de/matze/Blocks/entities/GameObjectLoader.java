@@ -3,6 +3,7 @@ package de.matze.Blocks.entities;
 import de.matze.Blocks.entities.components.Mesh;
 import de.matze.Blocks.entities.components.TransformComponent;
 import de.matze.Blocks.entities.components.shipComponents.ShipMovement;
+import de.matze.Blocks.entities.components.shipComponents.Velocity;
 import de.matze.Blocks.graphics.Loader;
 import de.matze.Blocks.graphics.Texture;
 import de.matze.Blocks.graphics.VertexArray;
@@ -47,6 +48,8 @@ public class GameObjectLoader {
                     break;
                 case "ShipMovement":    handleShipMovement(gameObject, currentLine, file_path, i);
                     break;
+                case "Velocity":    handleVelocity(gameObject, currentLine, file_path, i);
+                    break;
                 default:    System.err.println("Error in " + file_path + " - Line:" + ++i);
                     break;
             }
@@ -79,7 +82,7 @@ public class GameObjectLoader {
 
     private void handleShipMovement(GameObject b, String[] info, String path, int i) {
         try {
-            ShipMovement shipMovement = new ShipMovement(b, Float.parseFloat(info[1]));
+            ShipMovement shipMovement = new ShipMovement(b, Float.parseFloat(info[1]), Float.parseFloat(info[2]));
             b.addComponent(shipMovement);
         } catch (Exception e){
             System.err.println("Error while parsing ShipMovement in: " + path + " - Line: " + ++i);
@@ -89,6 +92,15 @@ public class GameObjectLoader {
     private void handleMagazin(GameObject b, String[] info, String path, int i) {
         try {
 
+        } catch (Exception e){
+            System.err.println("Error while parsing Magazin in: " + path + " - Line: " + ++i);
+        }
+    }
+
+    //ToDo proper implementation
+    private void handleVelocity(GameObject b, String[] info, String path, int i) {
+        try {
+            b.addComponent(new Velocity(Float.parseFloat(info[1])));
         } catch (Exception e){
             System.err.println("Error while parsing Magazin in: " + path + " - Line: " + ++i);
         }
