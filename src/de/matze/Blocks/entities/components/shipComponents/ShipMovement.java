@@ -58,19 +58,21 @@ public class ShipMovement extends Component{
         }
 
         if(!new_acceleration) {
-            if(velo.getVelocity().x > 0) {
-                velo.getVelocity().x -= Acceleration * WindowUtils.getFrameTimeSeconds();
+            if(velo.getVelocity().x >= 0) {
+                velo.getVelocity().x -= friction * WindowUtils.getFrameTimeSeconds();
             }
-            if(velo.getVelocity().x < 0) {
-                velo.getVelocity().x += Acceleration * WindowUtils.getFrameTimeSeconds();
+            if(velo.getVelocity().x <= 0) {
+                velo.getVelocity().x += friction * WindowUtils.getFrameTimeSeconds();
             }
-            if(velo.getVelocity().y > 0) {
-                velo.getVelocity().y -= Acceleration * WindowUtils.getFrameTimeSeconds();
+            if(velo.getVelocity().y >= 0) {
+                velo.getVelocity().y -= friction * WindowUtils.getFrameTimeSeconds();
             }
-            if(velo.getVelocity().y < 0) {
-                velo.getVelocity().y += Acceleration * WindowUtils.getFrameTimeSeconds();
+            if(velo.getVelocity().y <= 0) {
+                velo.getVelocity().y += friction * WindowUtils.getFrameTimeSeconds();
             }
         }
+
+        velo.round();           //get rid off floating point errors
 
         trans.getPos().x += velo.getVelocity().x * WindowUtils.getFrameTimeSeconds();
         trans.getPos().y += velo.getVelocity().y * WindowUtils.getFrameTimeSeconds();

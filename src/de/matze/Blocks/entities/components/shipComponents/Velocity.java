@@ -19,6 +19,12 @@ public class Velocity extends Component {
         velocity = v;
     }
 
+    public void round(){
+        if(Math.abs(velocity.x) < 0.1f) velocity.x=0;
+        if(Math.abs(velocity.y) < 0.1f) velocity.y=0;
+        if(Math.abs(velocity.z) < 0.1f) velocity.z=0;
+    }
+
     public Vector3f getVelocity() {
         return velocity;
     }

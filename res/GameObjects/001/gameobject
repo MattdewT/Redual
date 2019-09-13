@@ -2,4 +2,4 @@
 Transform
 Body body.obj body.png
 Velocity 10
-ShipMovement 50 50
+ShipMovement 50 100
